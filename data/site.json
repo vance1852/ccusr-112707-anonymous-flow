@@ -1,0 +1,58 @@
+{
+  "segments": {
+    "east": [
+      "sA",
+      "sB"
+    ],
+    "atrium": [
+      "sC",
+      "sD"
+    ],
+    "west": [
+      "sE"
+    ]
+  },
+  "agreements": {
+    "ae": {
+      "segment": "east",
+      "merchants": [
+        "tea",
+        "hall"
+      ],
+      "start_s": 0,
+      "end_s": 120
+    },
+    "aa": {
+      "segment": "atrium",
+      "merchants": [
+        "hall"
+      ],
+      "start_s": 0,
+      "end_s": 150
+    },
+    "aw": {
+      "segment": "west",
+      "merchants": [
+        "cafe"
+      ],
+      "start_s": 0,
+      "end_s": 150
+    }
+  },
+  "publication": {
+    "bin_s": 30,
+    "min_size": 3,
+    "join_signal_ttl_s": 12,
+    "client_cache_s": 8
+  },
+  "wire_fields": {
+    "permit": "区段 授权号 版本",
+    "apply": "设备 授权号 版本 动作",
+    "fragment": "设备 授权号 版本 标记 方向",
+    "coverage": "区段 状态",
+    "share": "区段 商户 动作",
+    "publish": "商户 起秒 止秒",
+    "cache": "商户 终端 动作",
+    "link": "连接态"
+  }
+}
