@@ -20,8 +20,9 @@
 {"arrival":20,"received":30,"captured":30,"source":"ops","type":"publish","args":["cafe",0,30]}
 {"arrival":21,"received":31,"captured":31,"source":"edge","type":"cache","args":["tea","tablet-7","save"]}
 {"arrival":22,"received":32,"captured":32,"source":"sB","type":"link","args":["offline"]}
-{"arrival":23,"received":33,"captured":33,"source":"ops","type":"share","args":["east","tea","revoke"]}
-{"arrival":24,"received":34,"captured":34,"source":"ingress","type":"apply","args":["sA","ae",2,"off"]}
-{"arrival":25,"received":34,"captured":11,"source":"sB","type":"fragment","args":["sB","ae",1,"sig2","in"]}
-{"arrival":26,"received":36,"captured":36,"source":"edge","type":"cache","args":["tea","tablet-7","query"]}
-{"arrival":27,"received":40,"captured":40,"source":"ops","type":"publish","args":["hall",0,30]}
+{"arrival":23,"received":32,"captured":32,"source":"tablet-7","type":"link","args":["offline"]}
+{"arrival":24,"received":33,"captured":33,"source":"ops","type":"share","args":["east","tea","revoke"]}
+{"arrival":25,"received":34,"captured":34,"source":"ingress","type":"apply","args":["sA","ae",2,"off"]}
+{"arrival":26,"received":34,"captured":11,"source":"sB","type":"fragment","args":["sB","ae",1,"sig2","in"]}
+{"arrival":27,"received":36,"captured":36,"source":"edge","type":"cache","args":["tea","tablet-7","query"]}
+{"arrival":28,"received":40,"captured":40,"source":"ops","type":"publish","args":["hall",0,30]}

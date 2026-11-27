@@ -11,7 +11,7 @@ class DeviceArchiveTest(unittest.TestCase):
     def test_envelopes_and_payload_widths(self):
         profile = load_profile()
         frames = list(read_frames())
-        self.assertEqual(len(frames), 27)
+        self.assertEqual(len(frames), 28)
         self.assertEqual(set(profile["wire_fields"]), {f["type"] for f in frames})
         self.assertEqual([f["arrival"] for f in frames], list(range(1, len(frames) + 1)))
         self.assertEqual([f["received"] for f in frames], sorted(f["received"] for f in frames))
@@ -30,14 +30,14 @@ class DeviceArchiveTest(unittest.TestCase):
 
     def test_related_device_evidence_is_present_in_reception_order(self):
         frames = list(read_frames())
-        indices = [8, 9, 10, 23]
+        indices = [8, 9, 10, 24]
         self.assertEqual([
             (frames[i]["source"], frames[i]["type"], frames[i]["args"][0]) for i in indices
         ], [('sA', 'fragment', 'sA'), ('sB', 'fragment', 'sB'), ('sA', 'fragment', 'sA'), ('ingress', 'apply', 'sA')])
-        indices = [17, 18, 20, 21, 22, 24]
+        indices = [17, 18, 20, 22, 23, 25]
         self.assertEqual([
             (frames[i]["source"], frames[i]["type"], frames[i]["args"][0]) for i in indices
-        ], [('ops', 'coverage', 'east'), ('ops', 'publish', 'tea'), ('edge', 'cache', 'tea'), ('sB', 'link', 'offline'), ('ops', 'share', 'east'), ('sB', 'fragment', 'sB')])
+        ], [('ops', 'coverage', 'east'), ('ops', 'publish', 'tea'), ('edge', 'cache', 'tea'), ('tablet-7', 'link', 'offline'), ('ops', 'share', 'east'), ('sB', 'fragment', 'sB')])
         indices = [14, 15, 16, 19]
         self.assertEqual([
             (frames[i]["source"], frames[i]["type"], frames[i]["args"][0]) for i in indices
